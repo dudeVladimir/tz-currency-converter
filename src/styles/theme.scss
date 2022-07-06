@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: black;
+  background: #eee;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #5e5e5e;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.box {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.error {
+  color: rgba(255, 0, 0, 0.6);
+}
+
+@import 'converter';

@@ -1,0 +1,121 @@
+.converter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 20px;
+  align-items: center;
+  background: #fff;
+  border-radius: 15px;
+
+  &__config {
+    margin: 0 15px;
+    min-height: 15vh;
+    display: flex;
+    align-items: center;
+
+    input {
+      background: #eee;
+      outline: none;
+      border: none;
+      padding: 7px 10px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+
+      &:disabled {
+        background: linear-gradient(
+          45deg,
+          #eeeeee 0%,
+          #cbcbcb 1%,
+          #eeeeee 100%
+        );
+        animation: backgraund 1s infinite alternate;
+      }
+    }
+
+    select {
+      background: #eee;
+      margin-left: 10px;
+      border: none;
+      outline: none;
+      padding: 7px 10px;
+      border-radius: 5px;
+      transition: all 0.1s ease;
+
+      &:disabled {
+        background: linear-gradient(
+          45deg,
+          #eeeeee 0%,
+          #cbcbcb 1%,
+          #eeeeee 100%
+        );
+        animation: backgraund 1s infinite alternate;
+      }
+    }
+  }
+}
+
+@keyframes backgraund {
+  0% {
+    background: linear-gradient(45deg, #eeeeee 0%, #cbcbcb 1%, #eeeeee 100%);
+  }
+  5% {
+    background: linear-gradient(45deg, #eeeeee 0%, #cbcbcb 5%, #eeeeee 100%);
+  }
+  10% {
+    background: linear-gradient(45deg, #eeeeee 0%, #cbcbcb 10%, #eeeeee 100%);
+  }
+  15% {
+    background: linear-gradient(45deg, #eeeeee 0%, #cbcbcb 15%, #eeeeee 100%);
+  }
+  20% {
+    background: linear-gradient(45deg, #eeeeee 0%, #cbcbcb 20%, #eeeeee 100%);
+  }
+  25% {
+    background: linear-gradient(45deg, #eeeeee 0%, #cbcbcb 25%, #eeeeee 100%);
+  }
+  30% {
+    background: linear-gradient(45deg, #eeeeee 0%, #cbcbcb 30%, #eeeeee 100%);
+  }
+  35% {
+    background: linear-gradient(45deg, #eeeeee 0%, #cbcbcb 35%, #eeeeee 100%);
+  }
+  40% {
+    background: linear-gradient(45deg, #eeeeee 0%, #cbcbcb 40%, #eeeeee 100%);
+  }
+  45% {
+    background: linear-gradient(45deg, #eeeeee 0%, #cbcbcb 45%, #eeeeee 100%);
+  }
+  50% {
+    background: linear-gradient(45deg, #eeeeee 0%, #cbcbcb 50%, #eeeeee 100%);
+  }
+  55% {
+    background: linear-gradient(45deg, #eeeeee 0%, #cbcbcb 55%, #eeeeee 100%);
+  }
+  60% {
+    background: linear-gradient(45deg, #eeeeee 0%, #cbcbcb 60%, #eeeeee 100%);
+  }
+  65% {
+    background: linear-gradient(45deg, #eeeeee 0%, #cbcbcb 65%, #eeeeee 100%);
+  }
+  70% {
+    background: linear-gradient(45deg, #eeeeee 0%, #cbcbcb 70%, #eeeeee 100%);
+  }
+  75% {
+    background: linear-gradient(45deg, #eeeeee 0%, #cbcbcb 75%, #eeeeee 100%);
+  }
+  80% {
+    background: linear-gradient(45deg, #eeeeee 0%, #cbcbcb 80%, #eeeeee 100%);
+  }
+  85% {
+    background: linear-gradient(45deg, #eeeeee 0%, #cbcbcb 85%, #eeeeee 100%);
+  }
+  90% {
+    background: linear-gradient(45deg, #eeeeee 0%, #cbcbcb 90%, #eeeeee 100%);
+  }
+  95% {
+    background: linear-gradient(45deg, #eeeeee 0%, #cbcbcb 95%, #eeeeee 100%);
+  }
+  100% {
+    background: linear-gradient(45deg, #eeeeee 0%, #cbcbcb 99%, #eeeeee 100%);
+  }
+}

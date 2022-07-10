@@ -1,13 +1,8 @@
 <template>
   <div class="converter__config">
-    <input
-      type="number"
-      placeholder="Введите количество..."
-      v-model="countCurr"
-      :disabled="loading"
-    />
+    <slot />
     <select name="currency" v-model="selectedCurr" :disabled="loading">
-      <option disabled selected value="/">Выберите валюту</option>
+      <option disabled value="/">Выберите валюту</option>
       <option v-for="item in currencys" :key="item.id" :value="item.id">
         {{ item.currencyName }}&nbsp;{{ item.currencySymbol }}
       </option>
@@ -23,26 +18,27 @@ import { useGetCurrency } from '@/stores/getCurrency'
 export default {
   props: ['currencys', 'defaultCurr'],
   setup(props, { emit }) {
-    const countCurr = ref()
     const selectedCurr = ref()
 
     const getCurrency = useGetCurrency()
 
+    const defaultCurr = computed(() => props.defaultCurr)
+
     onMounted(() => {
       selectedCurr.value = props.defaultCurr
-
-      watch([countCurr, selectedCurr], (newValues) => {
-        emit('update:modelValue', {
-          countCurr: newValues[0],
-          selectedCurr: newValues[1],
-        })
+      watch(defaultCurr, (newValue) => {
+        selectedCurr.value = newValue
       })
     })
 
+    watch(selectedCurr, (newValue) => {
+      emit('update:modelValue', newValue)
+    })
+
     return {
-      countCurr,
       selectedCurr,
       loading: computed(() => getCurrency.loading),
+      defaultCurr,
     }
   },
 }
